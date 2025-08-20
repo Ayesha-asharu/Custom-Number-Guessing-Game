@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Game</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+
+    <header>
+    <h1>Welcome! Make your own guessing game, with your own set of rules.</h1>
+    
+        <h2>Instructions</h2>
+        <ul>
+            <li>Select a starting range (a minimum number)</li>
+            <li>Select a ending range (a maximum number)</li>
+            <li>Select the number of tries for guessing.</li>
+            <li>A random number will be generated between your chosen range.</li>
+            <li>You will be given your chosen amount of tries.</li>
+            <li>If you can guess the random generated number within your choosen amount of tries then you win!</li>
+            <li>If you can't guess the number and you run out of attempts then you loose and the game ends.</li>
+        </ul>
+    </header>
+    <br><br>
+
+    <div class="selfselect">
+        <div class="inside-content">
+            <label for="minnum"> Enter a minimum number:</label>
+            <input id="minnum" placeholder="example: 5"> <br>
+            <label for="maxnum"> Enter a maximum number:</label>
+            <input id="maxnum" placeholder="example: 50"> <br> <br>
+            <label for="chances"> Enter the number of chances for guessing:</label>
+            <input id="chances" placeholder="example: 3">
+        </div>
+        
+        <div class="selfselectbuttons">
+            <button id="startBtn"> Start </button>
+            <button id="clear"> Clear </button>
+        </div>
+    </div>
+
+    <div class="modal-container" id="modal-container">
+        <div class="modal">
+            <h2 id="msg"></h2>
+            <div class="modal-buttons">
+                <button id="nobtn"> X </button>
+                <button id="yesbtn"><a href="customnum.html"> ✓ </a></button>
+            </div>
+        </div> <br>
+
+        
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
