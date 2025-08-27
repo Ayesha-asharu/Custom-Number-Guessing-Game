@@ -2,7 +2,6 @@ body{
     font-family: verdana;
     display: flex;
     justify-content: center;
-
 }
 
 .customgame{
@@ -11,6 +10,7 @@ body{
     max-height: fit-content;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
     padding: 50px;
