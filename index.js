@@ -1,5 +1,6 @@
 const Open = document.getElementById("startBtn");
 const Close = document.getElementById("nobtn");
+const yesBtn = document.getElementById("yesbtn")
 const modal_container = document.getElementById("modal-container");
 const minInput = document.getElementById("minnum");
 const maxInput = document.getElementById("maxnum");
@@ -20,9 +21,11 @@ Open.addEventListener('click', () =>{
     //validating
     if(isNaN(min) || isNaN(max) || isNaN(guesses) || min >= max){
         message.textContent = `Please Enter a valid number`;
+        yesBtn.disabled = true;
     }
     else if(min === 0 || max === 0 || guesses === 0){
         message.textContent = "Input values can't be empty or zero"
+        yesBtn.disabled = true;
     }
     else{
 
@@ -33,10 +36,13 @@ Open.addEventListener('click', () =>{
 
         message.textContent = `You have chosen your minimum number as "${min}" and maximum number as "${max}" 
         and number of chances for guessing as "${guesses}", click on '✓' to move forward.`;
-
         
     }
     modal_container.classList.add('show');
+    
+    yesBtn.addEventListener('click', () =>{
+        yesBtn = window.location = "customnum.html";
+    });
 });
 
 clearButton.addEventListener('click', () => {
